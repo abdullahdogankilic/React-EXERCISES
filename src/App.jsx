@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [Time, setTime] = useState(new Date().toLocaleTimeString());
 
+  const sec = new Date().getSeconds;
+  useEffect(() => {
+    setTime(new Date().toLocaleTimeString());
+  }, [sec]);
   return (
     <>
       <div>
-        <h1>Hello World</h1>
+        <h2>{Time}</h2>
       </div>
     </>
   );
