@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 
 function App() {
-  const [Time, setTime] = useState(new Date().toLocaleTimeString());
+  const [Time, setTime] = useState(new Date());
 
-  const sec = new Date().getSeconds;
   useEffect(() => {
-    setTime(new Date().toLocaleTimeString());
-  }, [sec]);
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+  }, []);
   return (
     <>
       <div>
-        <h2>{Time}</h2>
+        <h2>{Time.toLocaleTimeString()}</h2>
       </div>
     </>
   );
