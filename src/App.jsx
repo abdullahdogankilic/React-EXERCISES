@@ -11,3 +11,8 @@ function App() {
   );
 }
 export default App;
+
+//  If you pass a value directly, such as setCounter(counter + 1),
+//  React's ability to keep track of condition conditions can be detected in these differences.
+//   However, in accordance with its function,
+//   it ensures that every update step of React is followed accurately.
