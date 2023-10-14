@@ -1,25 +1,24 @@
 import React from "react";
-function AlertClock() {
-  function Clock() {
-    const Time = new Date().toLocaleTimeString();
-    return alert(Time);
-  }
-  return (
-    <>
-      <div>
-        <h1>Hello World</h1>
-        <button onClick={Clock}>Clock</button>
-      </div>
-    </>
-  );
-}
 
-function App() {
+const AlertClock = ({ onClick }) => {
   return (
-    <>
-      <AlertClock />
-    </>
+    <div>
+      <button onClick={onClick}>Clock</button>
+    </div>
   );
-}
+};
+
+const App = () => {
+  const Clock = () => {
+    const Time = new Date().toLocaleTimeString();
+    alert(Time);
+  };
+
+  return (
+    <div>
+      <AlertClock onClick={Clock} />
+    </div>
+  );
+};
 
 export default App;
