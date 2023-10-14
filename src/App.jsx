@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CounterDisplay from "./Counter";
 
 const App = ({ Value, increment, decrement }) => {
   const [count, setCount] = useState(Value);
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
 
   return (
     <div>
