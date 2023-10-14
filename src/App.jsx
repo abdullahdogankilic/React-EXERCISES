@@ -1,7 +1,6 @@
 import React from "react";
-
-function App() {
-  function AlertClock() {
+function AlertClock() {
+  function Clock() {
     const Time = new Date().toLocaleTimeString();
     return alert(Time);
   }
@@ -9,8 +8,16 @@ function App() {
     <>
       <div>
         <h1>Hello World</h1>
-        <button onClick={AlertClock}>Clock</button>
+        <button onClick={Clock}>Clock</button>
       </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <AlertClock />
     </>
   );
 }
