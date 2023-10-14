@@ -7,15 +7,15 @@ const Age = (props) => {
 const Welcome = (props) => {
   return (
     <div>
-      <h1>Welcome, {props.name}!</h1>
+      {props.name == "John" && <h1>Welcome, {props.name}!</h1>}
       {props.age > 18 && props.age < 65 && <Age age={props.age} />}
     </div>
   );
 };
 
 const App = () => {
-  const name = "John Doe";
-  const age = 65;
+  const name = "John";
+  const age = 50;
 
   return <Welcome name={name} age={age} />;
 };
