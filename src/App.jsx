@@ -1,15 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  function AlertClock() {
+    const Time = new Date().toLocaleTimeString();
+    return alert(Time);
+  }
   return (
     <>
       <div>
         <h1>Hello World</h1>
+        <button onClick={AlertClock}>Clock</button>
       </div>
     </>
   );
