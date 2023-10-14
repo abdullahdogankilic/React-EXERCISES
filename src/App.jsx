@@ -1,18 +1,22 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React from "react";
 
-function App() {
-  const [count, setCount] = useState(0);
+const Age = (props) => {
+  return <div>Your age is {props.age}.</div>;
+};
 
+const Welcome = (props) => {
   return (
-    <>
-      <div>
-        <h1>Hello World</h1>
-      </div>
-    </>
+    <div>
+      <h1>Welcome, {props.name}!</h1>
+      <Age age={props.age} />
+    </div>
   );
-}
+};
 
+const App = () => {
+  const name = "John Doe";
+  const age = 30;
+
+  return <Welcome name={name} age={age} />;
+};
 export default App;
