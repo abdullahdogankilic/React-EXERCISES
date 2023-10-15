@@ -16,6 +16,11 @@ function Login({ onLogin }) {
   function Remember(event) {
     setRemember(event.target.checked);
   }
+  function Reset() {
+    setPassword("");
+    setRemember(false);
+    setUsername("");
+  }
   function handleLogin() {
     if (username && password) {
       onLogin({ username, password, remember });
@@ -28,21 +33,22 @@ function Login({ onLogin }) {
     <div>
       <div>
         <label>Username:</label>
-        <input type="text" onChange={Username} />
+        <input type="text" value={username} onChange={Username} />
       </div>
 
       <div>
         <label>Password:</label>
-        <input type="password" onChange={Password} />
+        <input type="password" value={password} onChange={Password} />
       </div>
       <div>
         <label>
-          <input type="checkbox" onChange={Remember} />
+          <input type="checkbox" value={remember} onChange={Remember} />
           Remember
         </label>
         <button onClick={handleLogin} disabled={Disabled}>
           Login
         </button>
+        <button onClick={Reset}>Reset</button>
       </div>
     </div>
   );
