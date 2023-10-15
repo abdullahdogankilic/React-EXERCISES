@@ -1,9 +1,9 @@
 import React from "react";
 
-const MouseClicker = ({ name }) => {
-  const Click = (event) => {
+function MouseClicker({ name }) {
+  function Click(event) {
     console.log(event.target.name);
-  };
+  }
 
   return (
     <div onClick={Click}>
@@ -12,6 +12,6 @@ const MouseClicker = ({ name }) => {
       </button>
     </div>
   );
-};
+}
 
 export default MouseClicker;
