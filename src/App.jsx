@@ -1,14 +1,24 @@
-import React from "react";
-import MouseClicker from "./Click";
+import Welcome from "./Welcome";
+import React, { useState } from "react";
 
-function App() {
+function InteractiveWelcome() {
+  const [inputValue, setInputValue] = useState("");
+
+  function Input(event) {
+    setInputValue(event.target.value);
+  }
+
   return (
-    <>
-      <div>
-        <MouseClicker />
-      </div>
-    </>
+    <div>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={Input}
+        placeholder="Enter your name"
+      />
+      <Welcome name={inputValue} />
+    </div>
   );
 }
 
-export default App;
+export default InteractiveWelcome;
