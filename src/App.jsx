@@ -1,12 +1,11 @@
 import React from "react";
+import MouseClicker from "./Click";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div>
-        <h1>Hello World</h1>
+        <MouseClicker name={"one"} />
       </div>
     </>
   );
