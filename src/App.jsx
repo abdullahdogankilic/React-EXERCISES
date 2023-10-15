@@ -1,27 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Login({ onLogin }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [remember, setRemember] = useState(false);
-
-  function Username(event) {
-    setUsername(event.target.value);
-  }
-
-  function Password(event) {
-    setPassword(event.target.value);
-  }
-
-  function Remember(event) {
-    setRemember(event.target.checked);
-  }
-  function Reset() {
-    setPassword("");
-    setRemember(false);
-    setUsername("");
-  }
+function UncontrolledLogin({ onLogin }) {
   function handleLogin(event) {
+    const username = event.target.elements.username.value;
+    const password = event.target.elements.password.value;
+    const remember = event.target.elements.remember.checked;
     event.preventDefault();
     if (username && password) {
       onLogin({ username, password, remember });
@@ -35,26 +18,23 @@ function Login({ onLogin }) {
       <div>
         <div>
           <label>Username:</label>
-          <input type="text" value={username} onChange={Username} />
+          <input type="text" name="username" />
         </div>
 
         <div>
           <label>Password:</label>
-          <input type="password" value={password} onChange={Password} />
+          <input type="password" name="password" />
         </div>
         <div>
           <label>
-            <input type="checkbox" value={remember} onChange={Remember} />
+            <input type="checkbox" name="remember" />
             Remember
           </label>
-          <button onClick={handleLogin} disabled={Disabled}>
-            Login
-          </button>
-          <button onClick={Reset}>Reset</button>
+          <button disabled={Disabled}>Login</button>
         </div>
       </div>
     </form>
   );
 }
 
-export default Login;
+export default UncontrolledLogin;
