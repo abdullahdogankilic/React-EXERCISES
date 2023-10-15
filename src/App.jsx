@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 
-const Login = () => {
+function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
 
-  const Username = (event) => {
+  function Username(event) {
     setUsername(event.target.value);
-  };
+  }
 
-  const Password = (event) => {
+  function Password(event) {
     setPassword(event.target.value);
-  };
+  }
 
-  const Remember = (event) => {
+  function Remember(event) {
     setRemember(event.target.checked);
-  };
+  }
+  function handleLogin() {
+    if (username && password) {
+      onLogin({ username, password, remember });
+    }
+  }
+
+  const Disabled = !username || !password;
 
   return (
     <div>
@@ -33,9 +40,12 @@ const Login = () => {
           <input type="checkbox" onChange={Remember} />
           Remember
         </label>
+        <button onClick={handleLogin} disabled={Disabled}>
+          Login
+        </button>
       </div>
     </div>
   );
-};
+}
 
 export default Login;
