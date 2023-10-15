@@ -8,9 +8,9 @@ function MouseClicker({ name }) {
     console.log(event.target.src);
   }
   return (
-    <div onClick={Click}>
-      <button name={name}>
-        <img width={24} height={24} src="" alt="" onClick={imgClick} /> Click
+    <div>
+      <button name={name} onClick={Click}>
+        <img width={24} height={24} src="" alt="" onClick={imgClick} />
       </button>
     </div>
   );
