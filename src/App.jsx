@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 
-const Login = () => {
+function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
 
-  const Username = (event) => {
+  function Username(event) {
     setUsername(event.target.value);
-  };
+  }
 
-  const Password = (event) => {
+  function Password(event) {
     setPassword(event.target.value);
-  };
+  }
 
-  const Remember = (event) => {
+  function Remember(event) {
     setRemember(event.target.checked);
-  };
+  }
 
   return (
     <div>
@@ -36,6 +36,6 @@ const Login = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Login;
