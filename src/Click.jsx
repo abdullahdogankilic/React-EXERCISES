@@ -1,22 +1,23 @@
 import React from "react";
 
-function MouseClicker({ name }) {
+function MouseClicker() {
   function Click(event) {
     console.log(event.target.name);
   }
-  function imgClick(event) {
-    console.log(event.target.src);
-  }
+
   return (
     <div>
-      <button name={name} onClick={Click}>
-        <img width={24} height={24} src="" alt="" onClick={imgClick} />
+      <button name="one" onClick={Click}>
+        Click
+      </button>
+      <button name="two" onClick={Click}>
+        Click
+      </button>
+      <button name="three" onClick={Click}>
+        Click
       </button>
     </div>
   );
 }
 
 export default MouseClicker;
-
-// When the image is clicked, the "name" of the button is not printed to the console.
-//  This is because the click event on the image does not reach the button.
