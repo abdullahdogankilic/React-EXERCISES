@@ -1,10 +1,7 @@
 import React from "react";
+import AlertClock from "./Alert";
 
 function App() {
-  function AlertClock() {
-    const Time = new Date().toLocaleTimeString();
-    return alert(Time);
-  }
   return (
     <>
       <div>
