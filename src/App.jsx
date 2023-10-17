@@ -1,17 +1,17 @@
 import React from "react";
+import Message from "./message";
+import Hello from "./Hello";
 
-const Message = () => {
-  return <p>What a beautiful day!</p>;
-};
-
-const App = () => {
+function App() {
   return (
-    <div>
+    <>
+      <div>
+        <Hello /> <Hello />
+      </div>
       <Message />
-    </div>
+    </>
   );
-};
-
+}
 export default App;
 
 // it will not be a problem at all
