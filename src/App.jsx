@@ -1,12 +1,5 @@
 import React from "react";
-
-const AlertClock = ({ onClick }) => {
-  return (
-    <div>
-      <button onClick={onClick}>Clock</button>
-    </div>
-  );
-};
+import AlertClock from "./Alert";
 
 const App = () => {
   const Clock = () => {
