@@ -1,8 +1,8 @@
 import React from "react";
 
-const Welcome = ({ name }) => {
+function Welcome({ name }) {
   return <p>Welcome, {name}!</p>;
-};
+}
 
 Welcome.defaultProps = {
   name: "Guest",
