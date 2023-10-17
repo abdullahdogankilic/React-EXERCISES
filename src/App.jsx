@@ -1,15 +1,15 @@
 import React from "react";
 import Welcome from "./Welcome";
 
-function nameJSX() {
-  <strong>develhope</strong>;
+function NameJSX() {
+  return <strong>develhope</strong>;
 }
 
 function App() {
   return (
     <>
       <div>
-        <Welcome name={nameJSX} age={20} />
+        <Welcome name={<NameJSX />} age={20} />
       </div>
     </>
   );
