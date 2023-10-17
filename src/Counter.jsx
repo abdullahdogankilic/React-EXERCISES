@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import CounterDisplay from "./CounterDisplay";
 
-function Counter() {
-  const [count, setCount] = useState(0);
+function Counter({ Value, increment }) {
+  const [count, setCount] = useState(Value);
 
   return (
     <div>
       <CounterDisplay count={count} />
-      <button onClick={() => setCount(count + 1)}>Click </button>
+      <button onClick={setCount(count + increment)}>Click</button>
     </div>
   );
 }
