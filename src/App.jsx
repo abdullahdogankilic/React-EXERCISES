@@ -1,12 +1,12 @@
-import React from "react";
+import Hello from "./Hello";
 
-const Hello = () => {
+function App() {
   return (
-    <div>
-      <h2>Hello, World!</h2>
-      <p>What a beautiful day!</p>
-    </div>
+    <>
+      <div>
+        <Hello />
+      </div>
+    </>
   );
-};
-
-export default Hello;
+}
+export default App;
