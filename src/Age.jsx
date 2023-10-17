@@ -1,3 +1,4 @@
-export default function Age(age) {
+import React from "react";
+export default function Age({ age }) {
   return <div>Your age is {age}.</div>;
 }

@@ -5,6 +5,10 @@ function App() {
   const name = "John Doe";
   const age = 22;
 
-  return <Welcome name={name} age={age} />;
+  return (
+    <div>
+      <Welcome name={name} age={age} />
+    </div>
+  );
 }
 export default App;
