@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 function UncontrolledLogin({ onLogin }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   function handleLogin(event) {
     const username = event.target.elements.username.value;
     const password = event.target.elements.password.value;
@@ -18,12 +21,20 @@ function UncontrolledLogin({ onLogin }) {
       <div>
         <div>
           <label>Username:</label>
-          <input type="text" name="username" />
+          <input
+            type="text"
+            name="username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </div>
 
         <div>
           <label>Password:</label>
-          <input type="password" name="password" />
+          <input
+            type="password"
+            name="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <div>
           <label>
