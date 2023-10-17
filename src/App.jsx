@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import Counter from "./Counter";
 
-const App = ({ Value, increment }) => {
-  const [count, setCount] = useState(Value);
-
+function App() {
   return (
     <div>
-      <h2>{count}</h2>
-      <button onClick={setCount(count + increment)}>Click</button>
+      <Counter Value={20} increment={18} />
     </div>
   );
-};
+}
 
 export default App;
