@@ -1,12 +1,12 @@
 import React from "react";
 import Welcome from "./Welcome";
 
-const App = () => {
+function App() {
   return (
     <div>
-      <Welcome />
+      <Welcome name={abdullah} age={22} />
     </div>
   );
-};
+}
 
 export default App;
