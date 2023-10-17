@@ -1,14 +1,11 @@
-import { useState } from "react";
-import "./App.css";
+import React from "react";
 
-function App({ name }) {
-  return (
-    <>
-      <div>
-        <h1>Hello,{name}</h1>
-      </div>
-    </>
-  );
-}
+const Hello = ({ name }) => {
+  function create(name) {
+    return <h1>Hello, {name}</h1>;
+  }
 
-export default App;
+  return <div>{create(name)}</div>;
+};
+
+export default Hello;
