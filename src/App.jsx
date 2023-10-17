@@ -1,22 +1,10 @@
 import React from "react";
+import Welcome from "./Welcome";
 
-const Age = (props) => {
-  return <div>Your age is {props.age}.</div>;
-};
-
-const Welcome = (props) => {
-  return (
-    <div>
-      <h1>Welcome, {props.name}!</h1>
-      <Age age={props.age} />
-    </div>
-  );
-};
-
-const App = () => {
+function App() {
   const name = "John Doe";
-  const age = 30;
+  const age = 22;
 
   return <Welcome name={name} age={age} />;
-};
+}
 export default App;
