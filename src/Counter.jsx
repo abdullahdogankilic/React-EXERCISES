@@ -3,17 +3,31 @@ import CounterDisplay from "./CounterDisplay";
 
 function Counter({ Value, increment, decrement }) {
   const [count, setCount] = useState(Value);
+
   useEffect(() => {
     console.log(count);
   }, [count]);
 
+  const handleIncrement = () => {
+    setCount(count + increment);
+  };
+
+  const handleDecrement = () => {
+    setCount(count - decrement);
+  };
+
+  const handleReset = () => {
+    setCount(Value);
+  };
+
   return (
     <div>
       <CounterDisplay count={count} />
-      <button onClick={setCount(count + increment)}>Click</button>
-      <button onClick={setCount(count - decrement)}>decrement</button>
-      <button onClick={setCount(Value)}>Reset</button>
+      <button onClick={handleIncrement}>Click</button>
+      <button onClick={handleDecrement}>decrement</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
+
 export default Counter;
