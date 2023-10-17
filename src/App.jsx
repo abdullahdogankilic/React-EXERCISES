@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from "react";
-import CounterDisplay from "./Counter";
+import Counter from "./Counter";
 
-const App = ({ Value, increment, decrement }) => {
-  const [count, setCount] = useState(Value);
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
-
+function App() {
   return (
     <div>
-      <CounterDisplay count={count} />
-      <button onClick={setCount(count + increment)}>Click</button>
-      <button onClick={setCount(count - decrement)}>decrement</button>
-      <button onClick={setCount(Value)}>Reset</button>
+      <Counter Value={2} increment={2} decrement={2} />
     </div>
   );
-};
+}
 
 export default App;
