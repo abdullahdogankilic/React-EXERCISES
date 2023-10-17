@@ -1,16 +1,15 @@
 import React from "react";
+import Welcome from "./Welcome";
 
-const MyComponent = (props) => {
-  return <strong>{props.name}</strong>;
-};
-
-const nameJSX = <div>develhope</div>;
+function nameJSX() {
+  <strong>develhope</strong>;
+}
 
 function App() {
   return (
     <>
       <div>
-        <MyComponent name={nameJSX} />
+        <Welcome name={nameJSX} age={20} />
       </div>
     </>
   );
