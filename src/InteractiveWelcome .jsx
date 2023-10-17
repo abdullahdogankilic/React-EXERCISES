@@ -1,5 +1,5 @@
-import Welcome from "./Welcome";
 import React, { useState } from "react";
+import Welcome from "./Welcome";
 
 function InteractiveWelcome() {
   const [inputValue, setInputValue] = useState("");
@@ -11,7 +11,7 @@ function InteractiveWelcome() {
   return (
     <div>
       <input type="text" onChange={Input} placeholder="Enter your name" />
-      <Welcome name={inputValue} />
+      <Welcome name={inputValue} age={22} />
     </div>
   );
 }
