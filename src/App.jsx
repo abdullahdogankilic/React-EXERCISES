@@ -1,18 +1,5 @@
 import React from "react";
-function AlertClock() {
-  function Clock() {
-    const Time = new Date().toLocaleTimeString();
-    return alert(Time);
-  }
-  return (
-    <>
-      <div>
-        <h1>Hello World</h1>
-        <button onClick={Clock}>Clock</button>
-      </div>
-    </>
-  );
-}
+import AlertClock from "./Alert";
 
 function App() {
   return (
