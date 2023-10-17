@@ -1,19 +1,8 @@
-import Welcome from "./Welcome";
-import React, { useState } from "react";
+import React from "react";
+import InteractiveWelcome from "./InteractiveWelcome ";
 
-function InteractiveWelcome() {
-  const [inputValue, setInputValue] = useState("");
-
-  function Input(event) {
-    setInputValue(event.target.value);
-  }
-
-  return (
-    <div>
-      <input type="text" onChange={Input} placeholder="Enter your name" />
-      <Welcome name={inputValue} />
-    </div>
-  );
+function App() {
+  return <div></div>;
 }
 
-export default InteractiveWelcome;
+export default App;
