@@ -1,12 +1,8 @@
 import React from "react";
 
-function Welcome({ name }) {
+function Welcome({ name = "John" }) {
   return <p>Welcome, {name}!</p>;
 }
-
-Welcome.defaultProps = {
-  name: "Guest",
-};
 
 export default Welcome;
 
