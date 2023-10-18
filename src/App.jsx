@@ -1,11 +1,14 @@
 import React from "react";
+import Hello from "./Hello";
 
-function Hello() {
+function App() {
   return (
     <div>
-      <h2>Hello, World!</h2>
+      <h2>
+        <Hello name={abdullah} />
+      </h2>
     </div>
   );
 }
 
-export default Hello;
+export default App;
