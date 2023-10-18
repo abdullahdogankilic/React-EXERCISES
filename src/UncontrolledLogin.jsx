@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-function Login({ onLogin }) {
+function Uncontrolled({ onLogin }) {
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
   const rememberRef = useRef(null);
@@ -37,4 +37,4 @@ function Login({ onLogin }) {
   );
 }
 
-export default Login;
+export default Uncontrolled;
