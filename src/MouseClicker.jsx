@@ -1,7 +1,7 @@
 import React from "react";
 
 function MouseClicker({ name }) {
-  function Click(event) {
+  function click(event) {
     console.log(event.target.name);
   }
   function imgClick(event) {
@@ -9,7 +9,7 @@ function MouseClicker({ name }) {
   }
   return (
     <div>
-      <button name={name} onClick={Click}>
+      <button name={name} onClick={click}>
         <img width={24} height={24} src="" alt="" onClick={imgClick} />
       </button>
     </div>
