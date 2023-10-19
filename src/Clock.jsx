@@ -23,6 +23,11 @@ const Clock = () => {
         <option value="it">Italy</option>
         <option value="es">Spanish</option>
       </select>
+      <div>
+        {language === "en" && <p>Current Time: {time.toLocaleTimeString()}</p>}
+        {language === "it" && <p>Ora attuale: {time.toLocaleTimeString()}</p>}
+        {language === "es" && <p>Hora actual: {time.toLocaleTimeString()}</p>}
+      </div>
     </div>
   );
 };
