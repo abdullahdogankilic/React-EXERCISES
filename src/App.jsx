@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Clock from "./Clock";
+import Counter from "./Counter";
 
 function App() {
   return (
     <>
-      <Clock />
+      <Counter Value={2} increment={2} decrement={2} />
     </>
   );
 }
