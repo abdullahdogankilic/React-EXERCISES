@@ -5,32 +5,32 @@ function Login() {
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
 
-  function Username(event) {
+  const handleUsernameChange = (event) => {
     setUsername(event.target.value);
-  }
+  };
 
-  function Password(event) {
+  const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-  }
+  };
 
-  function Remember(event) {
+  const handleRememberChange = (event) => {
     setRemember(event.target.checked);
-  }
+  };
 
   return (
     <div>
       <div>
         <label>Username:</label>
-        <input type="text" onChange={Username} />
+        <input type="text" onChange={handleUsernameChange} />
       </div>
 
       <div>
         <label>Password:</label>
-        <input type="password" onChange={Password} />
+        <input type="password" onChange={handlePasswordChange} />
       </div>
       <div>
         <label>
-          <input type="checkbox" onChange={Remember} />
+          <input type="checkbox" onChange={handleRememberChange} />
           Remember
         </label>
       </div>
