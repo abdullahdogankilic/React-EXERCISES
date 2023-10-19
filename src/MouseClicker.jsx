@@ -1,13 +1,13 @@
 import React from "react";
 
 function MouseClicker({ name }) {
-  function Click(event) {
-    console.log(event.target.name);
+  function handleClick(event) {
+    console.log(name);
   }
 
   return (
-    <div onClick={Click}>
-      <button name={name}>
+    <div>
+      <button name={name} onClick={handleClick}>
         <img width={24} height={24} src="" alt="" /> Click
       </button>
     </div>
