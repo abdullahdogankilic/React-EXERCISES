@@ -4,13 +4,17 @@ import Welcome from "./Welcome";
 function InteractiveWelcome() {
   const [inputValue, setInputValue] = useState("");
 
-  function Input(event) {
+  const handleInputChange = (event) => {
     setInputValue(event.target.value);
-  }
+  };
 
   return (
     <div>
-      <input type="text" onChange={Input} placeholder="Enter your name" />
+      <input
+        type="text"
+        onChange={handleInputChange}
+        placeholder="Enter your name"
+      />
       <Welcome name={inputValue} age={22} />
     </div>
   );
