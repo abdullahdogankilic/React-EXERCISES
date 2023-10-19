@@ -1,13 +1,13 @@
 import React from "react";
 
 const MouseClicker = ({ name }) => {
-  const Click = (event) => {
-    console.log(event.target.name);
+  const handleClick = () => {
+    console.log(name);
   };
 
   return (
     <div>
-      <button name={name} onClick={Click}>
+      <button name={name} onClick={handleClick}>
         Click
       </button>
     </div>
