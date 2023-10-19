@@ -16,7 +16,7 @@ function Login({ onLogin }) {
   function Remember(event) {
     setRemember(event.target.checked);
   }
-  function handleLogin() {
+  function HandleLogin() {
     if (username && password) {
       onLogin({ username, password, remember });
     }
@@ -40,7 +40,7 @@ function Login({ onLogin }) {
           <input type="checkbox" onChange={Remember} />
           Remember
         </label>
-        <button onClick={handleLogin} disabled={Disabled}>
+        <button onClick={HandleLogin} disabled={Disabled}>
           Login
         </button>
       </div>
