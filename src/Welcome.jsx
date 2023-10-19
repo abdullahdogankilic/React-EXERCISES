@@ -1,9 +1,12 @@
-import Age from "./Age";
-export default function Welcome(props) {
+import React from "react";
+
+function Welcome({ name, age }) {
   return (
     <div>
-      <h1>Welcome, {props.name}!</h1>
-      {props.age > 18 && <Age age={props.age} />}
+      <p>Welcome, {name}!</p>
+      <p>Your age is {age}.</p>
     </div>
   );
 }
+
+export default Welcome;
