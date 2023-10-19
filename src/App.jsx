@@ -1,15 +1,15 @@
 import React from "react";
-import AlertClock from "./Alert";
+import AlertClock from "./AlertClock";
 
 const App = () => {
-  const Clock = () => {
-    const Time = new Date().toLocaleTimeString();
-    alert(Time);
+  const clock = () => {
+    const time = new Date().toLocaleTimeString();
+    alert(time);
   };
 
   return (
     <div>
-      <AlertClock onClick={Clock} />
+      <AlertClock onClick={clock} />
     </div>
   );
 };
