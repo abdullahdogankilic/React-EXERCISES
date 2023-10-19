@@ -1,5 +1,5 @@
 import React from "react";
-import MouseClicker from "./Click";
+import MouseClicker from "./MouseClicker";
 
 function App() {
   return (
