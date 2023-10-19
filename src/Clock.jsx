@@ -20,17 +20,13 @@ function Clock() {
       <div>
         <select onChange={handleLanguageChange}>
           <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="es">Spanish</option>
+          <option value="it">Italian</option>
         </select>
         <div>
           {language === "en" && (
             <p>Current Time: {Time.toLocaleTimeString()}</p>
           )}
-          {language === "fr" && (
-            <p>Heure actuelle: {Time.toLocaleTimeString()}</p>
-          )}
-          {language === "es" && <p>Hora actual: {Time.toLocaleTimeString()}</p>}
+          {language === "it" && <p>Ora attuale: {Time.toLocaleTimeString()}</p>}
         </div>
       </div>
     </>
