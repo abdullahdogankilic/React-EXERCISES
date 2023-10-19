@@ -1,15 +1,13 @@
 import React from "react";
 import Welcome from "./Welcome";
 
-function NameJSX() {
-  return <strong>develhope</strong>;
-}
+const jsxName = <span>Hello, I am a JSX expression!</span>;
 
 function App() {
   return (
     <>
       <div>
-        <Welcome name={<NameJSX />} age={20} />
+        <Welcome name={jsxName} age={20} />
       </div>
     </>
   );
