@@ -1,34 +1,18 @@
 import React, { useState } from "react";
 
-function useCounter(initialValue = 0) {
-  const [count, setCount] = useState(initialValue);
+function useCounter(initialValue = "") {
+  const [username, setUsername] = useState(initialValue);
+  const [password, setPassword] = useState(initialValue);
 
-  function increment() {
-    setCount((e) => e + 1);
+  function handleUsername(event) {
+    setUsername(event.target.value);
   }
 
-  function decrement() {
-    setCount((e) => e - 1);
+  function handlePassword(event) {
+    setPassword(event.target.value);
   }
 
-  function reset() {
-    setCount(initialValue);
-  }
-
-  return { count, increment, decrement, reset };
+  return { username, password, handleUsername, handlePassword };
 }
 
-function HookCounter() {
-  const { count, increment, decrement, reset } = useCounter(0);
-
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
-    </div>
-  );
-}
-
-export default HookCounter;
+export default useCounter;
