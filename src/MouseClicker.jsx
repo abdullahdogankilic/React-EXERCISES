@@ -5,6 +5,7 @@ function MouseClicker({ name }) {
     console.log(event.target.name);
   }
   function handleImgClick(event) {
+    event.stopPropagation();
     console.log(event.target.src);
   }
   return (
