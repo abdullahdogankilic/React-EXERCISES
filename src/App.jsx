@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import GithubUser from "./GithubUser";
+import ComponentUsingLocation from "./useCurrentLocation";
 
 function App() {
   return (
     <div>
-      <GithubUser username="mojombo" />
+      <ComponentUsingLocation />
     </div>
   );
 }
