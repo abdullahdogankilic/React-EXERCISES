@@ -2,7 +2,7 @@ import React from "react";
 
 function MouseClicker({ name }) {
   function handleClick(event) {
-    console.log(name);
+    console.log(event.target.name);
   }
 
   return (
