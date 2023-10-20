@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import GithubUser from "./GithubUser";
+import GithubUsers from "./GithubUsers ";
 
 function App() {
   return (
     <div>
-      <GithubUser username="abdullahdogankilic" />
+      <GithubUsers />
     </div>
   );
 }
