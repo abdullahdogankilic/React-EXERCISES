@@ -23,11 +23,7 @@ const GithubUser = ({ username }) => {
         <div>
           <h2>Name: {user.name}</h2>
           <p>Login: {user.login}</p>
-          <img
-            src={user.avatar_url}
-            alt="User Avatar"
-            style={{ width: 100, height: 100 }}
-          />
+          <img src={user.avatar_url} alt="User Avatar" />
         </div>
       ) : (
         <p>Loading...</p>
