@@ -1,8 +1,8 @@
 import React from "react";
 
 const MouseClicker = ({ name }) => {
-  const handleClick = () => {
-    console.log(name);
+  const handleClick = (event) => {
+    console.log(event.target.name);
   };
 
   return (
