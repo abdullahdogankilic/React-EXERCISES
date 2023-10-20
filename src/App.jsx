@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import HookCounter from "./HookCounter";
+import GithubUser from "./GithubUser";
 
 function App() {
   return (
     <div>
-      <HookCounter />
+      <GithubUser username={abdullahdogankilic} />
     </div>
   );
 }
