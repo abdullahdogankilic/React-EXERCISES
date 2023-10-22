@@ -5,52 +5,62 @@ function Login({ onLogin }) {
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
 
-  function Username(event) {
+  const handleUsernameChange = (event) => {
     setUsername(event.target.value);
-  }
+  };
 
-  function Password(event) {
+  const handlePasswordChange = (event) => {
     setPassword(event.target.value);
-  }
+  };
 
-  function Remember(event) {
+  const handleRememberChange = (event) => {
     setRemember(event.target.checked);
-  }
-  function Reset() {
+  };
+
+  const handleReset = () => {
     setPassword("");
     setRemember(false);
     setUsername("");
-  }
-  function HandleLogin(event) {
+  };
+
+  const handleLogin = (event) => {
     event.preventDefault();
     if (username && password) {
       onLogin({ username, password, remember });
     }
-  }
+  };
 
-  const Disabled = !username || !password;
+  const disabled = !username || !password;
 
   return (
     <form onSubmit={handleLogin}>
       <div>
         <div>
           <label>Username:</label>
-          <input type="text" value={username} onChange={Username} />
+          <input type="text" value={username} onChange={handleUsernameChange} />
         </div>
 
         <div>
           <label>Password:</label>
-          <input type="password" value={password} onChange={Password} />
+          <input
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
         </div>
         <div>
           <label>
-            <input type="checkbox" value={remember} onChange={Remember} />
+            <input
+              type="checkbox"
+              checked={remember}
+              onChange={handleRememberChange}
+            />
             Remember
           </label>
-          <button onClick={HandleLogin} disabled={Disabled}>
+          <button onClick={handleLogin} disabled={disabled}>
             Login
           </button>
-          <button onClick={Reset}>Reset</button>
+          <button onClick={handleReset}>Reset</button>
         </div>
       </div>
     </form>
