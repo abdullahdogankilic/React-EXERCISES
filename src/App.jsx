@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Welcome from "./Welcome";
+import Counter from "./Counter";
 
 function App() {
   return (
     <div>
-      <Welcome />
+      <Counter Value={12} increment={2} decrement={4} />
     </div>
   );
 }

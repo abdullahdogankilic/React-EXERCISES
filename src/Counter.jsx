@@ -20,7 +20,7 @@ function Counter({ Value, increment, decrement }) {
   }, [count]);
 
   return (
-    <div>
+    <div className="counterStyle">
       <CounterDisplay count={count} />
       <button onClick={() => setCount((prevCount) => prevCount + increment)}>
         increment
