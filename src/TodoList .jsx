@@ -22,7 +22,7 @@ function TodoList() {
   };
 
   return (
-    <div>
+    <div className="todoList">
       <div>
         <input
           type="text"

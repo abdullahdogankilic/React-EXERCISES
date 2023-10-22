@@ -2,3 +2,14 @@
   border: 3px solid maroon;
   background-color: azure;
 }
+.todoList {
+  border: 3px solid maroon;
+  background-color: azure;
+  list-style: none;
+  ul {
+    list-style: none;
+    li {
+      margin-top: 10px;
+    }
+  }
+}

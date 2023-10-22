@@ -1,13 +1,8 @@
 import React from "react";
-import { LanguageProvider } from "./LanguageContext";
-import Clock from "./Clock";
+import TodoList from "./TodoList ";
 
 function App() {
-  return (
-    <LanguageProvider>
-      <Clock />
-    </LanguageProvider>
-  );
+  return <TodoList />;
 }
 
 export default App;
