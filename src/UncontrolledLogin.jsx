@@ -3,14 +3,12 @@ import React from "react";
 function Uncontrolled() {
   function handleFormSubmit(event) {
     event.preventDefault();
-    const username = event.target.elements.namedItem("username").value;
-    const password = event.target.elements.namedItem("password").value;
-    const session = event.target.elements.namedItem("session").value;
+    const formData = new FormData(event.target);
 
     const data = {
-      username,
-      password,
-      session,
+      username: formData.get("username"),
+      password: formData.get("password"),
+      session: formData.get("session") === "on" ? true : false,
     };
     console.log(data);
   }
@@ -30,4 +28,10 @@ function Uncontrolled() {
 
 export default Uncontrolled;
 
-// FormData;
+// Advantages = Ease of Use: The FormData API simplifies the process of capturing form data,
+//  especially when dealing with complex forms with multiple inputs.
+// It allows you to easily gather form data into a single object.
+
+// Disadvantages=Limited Browser Support: While most modern browsers support the FormData API,
+// some older versions might have limited support.Therefore,
+// if compatibility with older browsers is a concern, additional handling might be necessary
