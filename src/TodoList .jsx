@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-// npm i uuid
+
 function TodoList() {
   const [items, setItems] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -24,9 +23,7 @@ function TodoList() {
       </div>
       <ul>
         {items.map((item, index) => (
-          <li key={index} id={uuidv4()}>
-            {item}
-          </li>
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>
