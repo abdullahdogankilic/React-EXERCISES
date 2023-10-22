@@ -1,38 +1,29 @@
-import React, { useRef } from "react";
+import React from "react";
 
-function Uncontrolled({ onLogin }) {
-  const usernameRef = useRef(null);
-  const passwordRef = useRef(null);
-  const rememberRef = useRef(null);
+function Uncontrolled() {
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const username = event.target.elements.namedItem("username").value;
+    const password = event.target.elements.namedItem("password").value;
+    const session = event.target.elements.namedItem("session").value;
 
-  function handleLogin() {
-    const username = usernameRef.current.value;
-    const password = passwordRef.current.value;
-    const remember = rememberRef.current.checked;
-
-    if (username && password) {
-      onLogin({ username, password, remember });
-    }
+    const data = {
+      username,
+      password,
+      session,
+    };
+    console.log(data);
   }
 
   return (
     <div>
-      <div>
-        <label>Username:</label>
-        <input type="text" ref={usernameRef} />
-      </div>
-
-      <div>
-        <label>Password:</label>
-        <input type="password" ref={passwordRef} />
-      </div>
-      <div>
-        <label>
-          <input type="checkbox" ref={rememberRef} />
-          Remember
-        </label>
-        <button onClick={handleLogin}>Login</button>
-      </div>
+      <form onSubmit={handleFormSubmit}>
+        <input name="username" />
+        <input type="password" name="password" />
+        <input type="checkbox" name="session" />
+        <button>login </button>
+        <button type="reset">Reset</button>
+      </form>
     </div>
   );
 }
