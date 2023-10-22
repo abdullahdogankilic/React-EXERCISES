@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./app.css";
 function Uncontrolled() {
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -16,10 +16,12 @@ function Uncontrolled() {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <input name="username" />
+        <input name="username" className="" />
         <input type="password" name="password" />
         <input type="checkbox" name="session" />
-        <button>login </button>
+        <button className="bg-blue-500 hover:bg-inherit-blue-700 text-white font-bold py-2 px-4 rounded-full">
+          login{" "}
+        </button>
         <button type="reset">Reset</button>
       </form>
     </div>
