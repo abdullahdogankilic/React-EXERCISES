@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Counter from "./Counter";
+import Login from "./Login";
 
 function App() {
   return (
     <div>
-      <Counter Value={12} increment={2} decrement={4} />
+      <Login />
     </div>
   );
 }

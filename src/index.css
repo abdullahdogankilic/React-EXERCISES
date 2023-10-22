@@ -8,3 +8,10 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+.btnRed {
+  background-color: red;
+}
+.btnGreen {
+  background-color: green;
+}
