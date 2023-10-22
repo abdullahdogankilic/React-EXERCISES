@@ -2,8 +2,15 @@ import React, { useEffect, useRef } from "react";
 
 function FocusableInput() {
   const inputRef = useRef(null);
+  let mountRef = useRef(false);
 
   useEffect(() => {
+    if (!mountRef.current) {
+      mountRef.current = true;
+      console.log("Mounting first time!");
+    } else {
+      console.log("Mounting again!");
+    }
     inputRef.current.focus();
   }, []);
 
