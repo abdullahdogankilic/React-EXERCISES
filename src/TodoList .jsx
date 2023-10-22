@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+// npm i uuid
 function TodoList() {
   const [items, setItems] = useState([]);
   const [inputValue, setInputValue] = useState("");
