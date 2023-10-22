@@ -1,11 +1,12 @@
 import React from "react";
+import Color from "./Color";
 
 export default function Colors({ colors }) {
   return (
     <div>
       <ul>
         {colors.map((color) => (
-          <li key={color.id}>{color.name}</li>
+          <Color name={color.name} id={color.id} />
         ))}
       </ul>
     </div>
