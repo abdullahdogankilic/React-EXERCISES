@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import Uncontrolled from "./UncontrolledLogin";
+import FocusableInput from "./FocusableInput";
 
 function App() {
   return (
     <div>
-      <Uncontrolled />
+      <FocusableInput />
     </div>
   );
 }
