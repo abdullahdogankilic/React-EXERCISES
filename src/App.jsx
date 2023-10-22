@@ -1,8 +1,8 @@
 import React from "react";
-import TodoList from "./TodoList ";
+import FocusableInput from "./FocusableInput";
 
 function App() {
-  return <TodoList />;
+  return <FocusableInput />;
 }
 
 export default App;

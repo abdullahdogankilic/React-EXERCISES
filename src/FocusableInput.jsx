@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function FocusableInput() {
   const inputRef = useRef(null);
@@ -28,12 +29,14 @@ function FocusableInput() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input name="username" ref={inputRef} />
-        <input type="password" name="password" />
+      <form onSubmit={handleSubmit} className="row g-3 align-items-center">
+        <input name="username" className="form-control" ref={inputRef} />
+        <input type="password" className="form-control" name="password" />
         <input type="checkbox" name="session" />
-        <button>login</button>
-        <button type="reset">Reset</button>
+        <button className="btn btn-danger">login</button>
+        <button type="reset" className="btn btn-dark">
+          Reset
+        </button>
       </form>
     </div>
   );
