@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "./LanguageContext";
 
-const Clock = () => {
+function Clock() {
   const { language, setLanguage } = useContext(LanguageContext);
   const [time, setTime] = useState(new Date());
 
@@ -17,7 +17,7 @@ const Clock = () => {
   };
 
   return (
-    <div>
+    <div className="clock">
       <select value={language} onChange={handleLanguageChange}>
         <option value="en">English</option>
         <option value="it">Italy</option>
@@ -30,6 +30,6 @@ const Clock = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Clock;

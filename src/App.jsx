@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
-import Login from "./Login";
+import { LanguageProvider } from "./LanguageContext";
+import Clock from "./Clock";
 
 function App() {
   return (
-    <div>
-      <Login />
-    </div>
+    <LanguageProvider>
+      <Clock />
+    </LanguageProvider>
   );
 }
 
