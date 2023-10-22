@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import FocusableInput from "./FocusableInput";
+import Counter from "./Counter";
 
 function App() {
   return (
     <div>
-      <FocusableInput />
+      <Counter Value={2} increment={5} decrement={2} />
     </div>
   );
 }

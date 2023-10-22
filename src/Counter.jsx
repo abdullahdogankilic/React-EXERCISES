@@ -1,19 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CounterDisplay from "./CounterDisplay";
 
 function Counter({ Value, increment, decrement }) {
   const [count, setCount] = useState(Value);
+  const directionRef = useRef(null);
+
   useEffect(() => {
-    console.log(count);
+    if (count > Value) {
+      if (directionRef.current !== "down") {
+        directionRef.current = "down";
+        console.log(directionRef.current);
+      }
+    } else if (count < Value) {
+      if (directionRef.current !== "up") {
+        directionRef.current = "up";
+        console.log(directionRef.current);
+      }
+    }
   }, [count]);
 
   return (
     <div>
       <CounterDisplay count={count} />
-      <button onClick={setCount(count + increment)}>Click</button>
-      <button onClick={setCount(count - decrement)}>decrement</button>
-      <button onClick={setCount(Value)}>Reset</button>
+      <button onClick={() => setCount((prevCount) => prevCount + increment)}>
+        increment
+      </button>
+      <button onClick={() => setCount((prevCount) => prevCount - decrement)}>
+        decrement
+      </button>
+      <button onClick={() => setCount(Value)}>Reset</button>
     </div>
   );
 }
+
 export default Counter;
