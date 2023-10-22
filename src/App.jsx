@@ -1,11 +1,17 @@
 import React from "react";
 import "./App.css";
-import TodoList from "./TodoList ";
+import Colors from "./Colors";
 
 function App() {
   return (
     <div>
-      <TodoList />
+      <Colors
+        colors={[
+          { name: "adk", id: 1 },
+          { name: "adk2", id: 2 },
+          { name: "adk3", id: 3 },
+        ]}
+      />
     </div>
   );
 }
