@@ -5,7 +5,13 @@ import Colors from "./Colors";
 function App() {
   return (
     <div>
-      <Colors Colors={["Red", "Blue", "Gray", "Black", "Yellow"]} />
+      <Colors
+        colors={[
+          { name: "adk", id: 1 },
+          { name: "adk2", id: 2 },
+          { name: "adk3", id: 3 },
+        ]}
+      />
     </div>
   );
 }
