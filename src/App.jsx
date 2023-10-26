@@ -1,8 +1,17 @@
-import React from "react";
-import FocusableInput from "./FocusableInput";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Welcome from "./Welcome";
 
 function App() {
-  return <FocusableInput />;
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Welcome name="John" />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
