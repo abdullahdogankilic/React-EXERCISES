@@ -16,11 +16,14 @@ function Uncontrolled() {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <input name="username" className="" />
+        <input
+          name="username"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        />
         <input type="password" name="password" />
         <input type="checkbox" name="session" />
-        <button className="bg-blue-500 hover:bg-inherit-blue-700 text-white font-bold py-2 px-4 rounded-full">
-          login{" "}
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          login
         </button>
         <button type="reset">Reset</button>
       </form>
