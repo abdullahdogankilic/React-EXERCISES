@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
-import GithubUsers from "./GithubUsers ";
+import GithubUsers from "./GithubUsersList ";
 import ShowGithubUser from "./ShowGithubUser";
 
 function App() {

@@ -25,7 +25,10 @@ const GithubUsers = () => {
 
   return (
     <div>
-      <h1>Github Users</h1>
+      <div>
+        <h2>Github Users List</h2>
+        <p>Add a user and select it</p>
+      </div>
       <ul>
         {users.map((user) => (
           <li key={user.id}>
