@@ -19,6 +19,14 @@ function App() {
             element={<Counter Value={2} increment={1} decrement={5} />}
           />
           <Route path="users/:username" element={<ShowGithubUser />} />
+          <Route
+            path="*"
+            element={
+              <div>
+                <p>Not Fount</p>
+              </div>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
