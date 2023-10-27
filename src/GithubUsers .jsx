@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import GithubUser from "./GithubUser";
+import { Link } from "react-router-dom";
 
 const GithubUsers = () => {
   const [users, setUsers] = useState([]);
-  const [selectedUser, setSelectedUser] = useState(null);
+  // const [selectedUser, setSelectedUser] = useState(null);
 
   async function fetchGithubUsers() {
     try {
@@ -18,21 +19,21 @@ const GithubUsers = () => {
     fetchGithubUsers();
   }, []);
 
-  const handleUserClick = (username) => {
-    setSelectedUser(username);
-  };
+  // const handleUserClick = (username) => {
+  //   setSelectedUser(username);
+  // };
 
   return (
     <div>
       <h1>Github Users</h1>
       <ul>
         {users.map((user) => (
-          <li key={user.id} onClick={() => handleUserClick(user.login)}>
-            <h4>{user.login}</h4>
+          <li key={user.id}>
+            <Link to={`/users/${user.login}`}>{user.login}</Link>
           </li>
         ))}
       </ul>
-      {selectedUser && <GithubUser username={selectedUser} />}
+      {/* {selectedUser && <GithubUser username={selectedUser} />} */}
     </div>
   );
 };
