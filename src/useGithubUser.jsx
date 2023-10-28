@@ -8,17 +8,22 @@ function useGithubUser(username) {
       user: null,
       isLoading: false,
       isError: null,
+      onRefresh: handleRefreshUsers,
     };
   }
 
-  const { data, error } = useSWR(
+  const { data, error, mutate } = useSWR(
     `https://api.github.com/users/${username}`,
     fetcher
   );
+  const handleRefreshUsers = () => {
+    mutate();
+  };
   return {
     user: data,
     isLoading: !error && !data,
     isError: error,
+    onRefresh: handleRefreshUsers,
   };
 }
 

@@ -2,10 +2,11 @@
 
 import useGithubUser from "./useGithubUser";
 const GithubUser = ({ username }) => {
-  const { user, isLoading, isError } = useGithubUser(username);
+  const { user, isLoading, isError, onRefresh } = useGithubUser(username);
 
   return (
     <>
+      <button onClick={onRefresh}>Refresh</button>
       {isLoading && <h2>Loading...</h2>}
       {isError && <h2>Error</h2>}
       {user && (
