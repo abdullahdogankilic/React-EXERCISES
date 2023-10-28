@@ -10,7 +10,8 @@ function App() {
     <div>
       <BrowserRouter>
         <div>
-          <Link to="/">App</Link> | <Link to="/counter">Counter</Link> |{" "}
+          <Link to="/">App</Link> | <Link to="/counter">Counter</Link> | |
+          <Link to="/users">users</Link>
         </div>
         <Routes>
           <Route path="/" element={<Welcome name="John" />} />
